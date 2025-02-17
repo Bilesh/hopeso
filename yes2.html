@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      function openInstagramDM() {
+        // Create an iframe to attempt deep linking (better for mobile)
+        let iframe = document.createElement("iframe");
+        iframe.style.display = "none";
+        iframe.src = "instagram://direct/t/101750047896790";
+        document.body.appendChild(iframe);
+
+        // If the app doesn’t open within 2 seconds, redirect to the web version
+        setTimeout(() => {
+          window.location.href = "https://www.instagram.com/direct/t/101750047896790?hl=en";
+        }, 2000);
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <h1 class="header_text">Yeeyy ! Finally</h1>
+        <p>
+          <a href="https://www.instagram.com/bilesh.b.shrestha/?hl=en">@bileshsth</a>
+        </p>
+      </div>
+      <div class="gif_container">
+        <img
+          src="https://i.postimg.cc/wTDG30TB/yes.gif"
+          alt="Cute animated illustration"
+        />
+      </div>
+      <div class="button_container">
+        <button class="btn" onclick="openInstagramDM()">
+          "Idhar sey direct Inbox made it easy lol..."<br>"----CLICK CLICK----"
+        </button>
+        <a href="https://www.instagram.com/bilesh.b.shrestha/?hl=en" target="_blank">
+          <button class="btn">"Profile Visit HEHE...."<br>"----CLICK CLICK----"</button>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
